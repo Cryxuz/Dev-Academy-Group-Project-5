@@ -1,8 +1,9 @@
 //import Item from './Item.tsx'
 //import {Outlet} from 'react-router-dom'
 //also need to have something about the Outlet?
-
-import ItemList from './ItemList.tsx'
+import { Outlet } from 'react-router-dom'
+// import ClaimItem from './ClaimItem.tsx'
+// import ItemList from './ItemList.tsx'
 
 export default function App() {
   return (
@@ -11,7 +12,9 @@ export default function App() {
         <h1>One Mans Trash</h1>
       </header>
       <section className="main">
-        <ItemList />
+        {/* <ClaimItem /> */}
+        {/* <ItemList /> */}
+        <Outlet />
       </section>
     </> //OUTLET//
   )

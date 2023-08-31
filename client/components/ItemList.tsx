@@ -1,5 +1,5 @@
 import useQuery from '@tanstack/react-query'
-import Link from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import getAllItems //
 
 export default function ItemList() {
@@ -12,17 +12,23 @@ export default function ItemList() {
     {
       id: 7,
       name: 'free thing',
-      canBeTraded: 'true',
+      description: 'some cool free thing',
+      image: '',
+      tradeable: true,
     },
     {
       id: 2,
       name: 'free thing 2',
-      canBeTraded: 'true',
+      description: 'some cool free thing',
+      image: '',
+      tradeable: true,
     },
     {
       id: 14,
       name: 'free thing 14',
-      canBeTraded: 'true',
+      description: 'some cool free thing',
+      image: '',
+      tradeable: true,
     },
   ]
 
@@ -33,7 +39,11 @@ export default function ItemList() {
         {items.map((i) => (
           <li key={i.id}>
             {i.name}
-            <button id="would-like">Claim This</button>
+
+            <Link to="/claimitem">
+              <button id="would-like">Claim This</button>
+            </Link>
+
             <button id="would-not-like">No Thank You</button>
           </li>
         ))}
