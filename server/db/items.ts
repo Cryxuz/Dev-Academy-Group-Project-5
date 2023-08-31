@@ -21,3 +21,9 @@ export async function deleteItem(id: number) {
 
 // function addItems(item object data)
 // return single item
+
+// BASKET QUERIES
+export async function fetchBasketItems() {
+  const allBasketItems = await db('basket').select('*')
+  return allBasketItems
+}
