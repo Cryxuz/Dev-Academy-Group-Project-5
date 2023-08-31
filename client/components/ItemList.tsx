@@ -1,42 +1,24 @@
-import useQuery from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
-// import getAllItems //
+import { fetchAllItems } from '../apis/apiClient'
+import { Item } from '../../models/items'
 
 export default function ItemList() {
-  // const {
-  //   data: something,
-  //   error,
-  //   isLoading,
-  // } = useQuery(['items'], () => getAllItems())
-  const items = [
-    {
-      id: 7,
-      name: 'free thing',
-      description: 'some cool free thing',
-      image: '',
-      tradeable: true,
-    },
-    {
-      id: 2,
-      name: 'free thing 2',
-      description: 'some cool free thing',
-      image: '',
-      tradeable: true,
-    },
-    {
-      id: 14,
-      name: 'free thing 14',
-      description: 'some cool free thing',
-      image: '',
-      tradeable: true,
-    },
-  ]
+  const { data: items, error, isLoading } = useQuery(['items'], fetchAllItems)
+  console.log(items)
 
+  if (error) {
+    return <p>Whoops, no items!</p>
+  }
+
+  if (!items || isLoading) {
+    return <p>Loading items..</p>
+  }
   return (
     <>
       <h2>All Items Available</h2>
       <ul>
-        {items.map((i) => (
+        {items.map((i: Item) => (
           <li key={i.id}>
             {i.name}
             <Link to="/claimitem">
@@ -53,4 +35,3 @@ export default function ItemList() {
 
 // y/n box
 //<Link to={`/${i.id}/itemdetails`}</Link>
-
