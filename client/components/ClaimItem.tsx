@@ -13,7 +13,6 @@ export default function ClaimItem() {
     name: 'item 3',
     id: 3,
   }
-
   return (
     <>
       <h2>Congratulations on your claim!</h2>
