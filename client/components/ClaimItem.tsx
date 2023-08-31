@@ -2,17 +2,31 @@
 // display contact details for seller
 // display item claimed
 
+import { useQuery } from '@tanstack/react-query'
+import type { Item, ItemData } from '../../models/items'
+import { getItemById } from '../apis/apiClient'
+
 export default function ClaimItem() {
   const user = {
-    name: 'User 1',
+    name: 'SpecialUser123',
     id: 3,
     email: '123@mail.com',
   }
+  const {
+    data: itemClaimed,
+    error,
+    isLoading,
+  } = useQuery(['itemClaimed'], getItemById)
+  console.log(itemClaimed)
 
-  const itemClaimed = {
-    name: 'item 3',
-    id: 3,
+  if (error) {
+    return <p>Sorry! No Item matches!</p>
   }
+
+  if (!itemClaimed || isLoading) {
+    return <p>Loading item..</p>
+  }
+
   return (
     <>
       <h2>Congratulations on your claim!</h2>
