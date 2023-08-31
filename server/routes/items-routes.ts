@@ -1,4 +1,18 @@
+import express from 'express'
+import * as db from '../db/items.ts'
+
+const router = express.Router()
+
 // GET /api/vi/items
+router.get('/', async (req, res) => {
+  try {
+    const items = await db.getAllItems()
+    res.json(items)
+  } catch (error) {
+    res.status(500)
+  }
+})
+
 // call getItems from data base
 // return JSON array of all item objects
 
