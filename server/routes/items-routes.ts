@@ -5,6 +5,7 @@ const router = express.Router()
 
 // GET /api/vi/items
 router.get('/', async (req, res) => {
+  console.log('made it to server')
   try {
     const items = await db.getAllItems()
     res.json(items)
@@ -13,6 +14,7 @@ router.get('/', async (req, res) => {
   }
 })
 
+export default router
 // call getItems from data base
 // return JSON array of all item objects
 
