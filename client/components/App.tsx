@@ -5,6 +5,8 @@ import { Outlet } from 'react-router-dom'
 // import ClaimItem from './ClaimItem.tsx'
 // import ItemList from './ItemList.tsx'
 
+import ItemList from './ItemList.tsx'
+
 export default function App() {
   return (
     <>

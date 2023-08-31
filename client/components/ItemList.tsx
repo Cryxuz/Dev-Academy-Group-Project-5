@@ -39,7 +39,6 @@ export default function ItemList() {
         {items.map((i) => (
           <li key={i.id}>
             {i.name}
-
             <Link to="/claimitem">
               <button id="would-like">Claim This</button>
             </Link>
@@ -54,4 +53,4 @@ export default function ItemList() {
 
 // y/n box
 //<Link to={`/${i.id}/itemdetails`}</Link>
-// small change
+
