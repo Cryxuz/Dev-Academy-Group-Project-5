@@ -54,4 +54,4 @@ export default function ItemList() {
 
 // y/n box
 //<Link to={`/${i.id}/itemdetails`}</Link>
-//
+// small change
