@@ -19,7 +19,7 @@ export default function ClaimItem() {
     data: itemClaimed,
     error,
     isLoading,
-  } = useQuery(['items'], () => fetchItemById(id))
+  } = useQuery(['items', id], () => fetchItemById(id))
   console.log(itemClaimed)
 
   if (error) {
