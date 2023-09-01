@@ -13,17 +13,20 @@ export default function BasketItems() {
 
   if (isLoading) return <p>Your basket is being filled...</p>
 
+  if (basketItems.length === 0) {
+    return (
+      <>
+        <h2>This is your basket</h2>
+        <p>Whoops! Your basket is empty!</p>
+      </>
+    )
+  }
+
   return (
     <>
       <h2>This is your basket</h2>
-      {basketItems.length === 0} ? (<p>Whoops! Your basket is empty!</p>) : (
-      <p>Items in you basket</p>)
-      {/* <div>
-        <h2>Pokemon List</h2>
-        {basketItems.map((thing) => (
-          <ItemData key={thing.id} id={thing.id} name={thing.name} />
-        ))}
-      </div> */}
+      <p>Items in you basket</p>
+      {/* {basketItems.map(item)} */}
     </>
     //Array we need to iterate over an display each item
     // use a .map?
