@@ -28,6 +28,7 @@ router.get('/:id/claimitem', (req, res) => {
 })
 
 export default router
+
 // call getItems from data base
 // return JSON array of all item objects
 

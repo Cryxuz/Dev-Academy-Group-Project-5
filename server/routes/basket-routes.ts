@@ -13,4 +13,16 @@ router.get('/', async (req, res) => {
   }
 })
 
+// POST /api/vi/basket
+router.post('/', async (req, res) => {
+  try {
+    const newBasketItem = req.body
+    const basketItem = await db.addItemToBasket(newBasketItem)
+    res.json(basketItem)
+  } catch (error) {
+    res.sendStatus(500)
+    console.error(error)
+  }
+})
+
 export default router

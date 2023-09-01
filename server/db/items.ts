@@ -2,7 +2,7 @@ import { Item, ItemData } from '../../models/items.ts'
 import db from './connection.ts'
 
 export async function getAllItems(): Promise<Item[]> {
-  const allItems = await db('items').select('*') //perhaps?
+  const allItems = await db('items').select('') //perhaps?
   return allItems
 }
 // returns [{id: number , name: string, description: string, image: null, tradable: boolean}]
@@ -14,7 +14,7 @@ export async function getItemById(id: number) {
 
 // maybe change this for if we have more than one item?
 export async function addItemToBasket(item: ItemData): Promise<Item> {
-  const addedItem = await db('basket').insert(item).returning('*')
+  const addedItem = await db('basket').insert(item).returning('')
   return addedItem[0]
 }
 
