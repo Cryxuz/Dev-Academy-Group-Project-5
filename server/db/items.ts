@@ -7,6 +7,11 @@ export async function getAllItems(): Promise<Item[]> {
 }
 // returns [{id: number , name: string, description: string, image: null, tradable: boolean}]
 
+export async function getItemById(id: number) {
+  const itemById = await db('items').where('id', id).select().first()
+  return itemById
+}
+
 // maybe change this for if we have more than one item?
 export async function addItemToBasket(item: ItemData): Promise<Item> {
   const addedItem = await db('basket').insert(item).returning('*')
