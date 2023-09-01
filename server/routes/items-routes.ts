@@ -1,5 +1,6 @@
 import express from 'express'
 import * as db from '../db/items.ts'
+import { getItemById } from '../db/items.ts'
 
 const router = express.Router()
 
@@ -12,6 +13,18 @@ router.get('/', async (req, res) => {
   } catch (error) {
     res.status(500)
   }
+})
+
+router.get('/:id/claimitem', (req, res) => {
+  console.log('server')
+  const id = Number(req.params.id)
+  getItemById(id)
+    .then((items) => {
+      res.json(items)
+    })
+    .catch((error) => {
+      res.status(500).send(error.message)
+    })
 })
 
 export default router

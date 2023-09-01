@@ -3,20 +3,23 @@
 // display item claimed
 
 import { useQuery } from '@tanstack/react-query'
-import type { Item, ItemData } from '../../models/items'
-import { getItemById } from '../apis/apiClient'
+// import type { Item, ItemData } from '../../models/items'
+import { fetchItemById } from '../apis/apiClient'
+import { useParams } from 'react-router-dom'
 
 export default function ClaimItem() {
+  const id = Number(useParams().id)
   const user = {
     name: 'SpecialUser123',
     id: 3,
     email: '123@mail.com',
   }
+
   const {
     data: itemClaimed,
     error,
     isLoading,
-  } = useQuery(['itemClaimed'], getItemById)
+  } = useQuery(['items'], () => fetchItemById(id))
   console.log(itemClaimed)
 
   if (error) {

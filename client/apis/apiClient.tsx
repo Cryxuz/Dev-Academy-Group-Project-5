@@ -1,5 +1,5 @@
 import request from 'superagent'
-import type { Item, ItemData } from '../../models/items'
+// import type { Item, ItemData } from '../../models/items'
 // insert other imports here
 // export functions
 // const ____url = '/api/v1/____'
@@ -12,8 +12,9 @@ export async function fetchAllItems() {
 }
 
 //Get /api/v1/:id/claimitem
-export async function getItemById(id: number) {
-  const response = await request.get(`/api/v1/${id}/claimitem`)
+export async function fetchItemById(id: number) {
+  console.log('api')
+  const response = await request.get(`/api/v1/items/${id}/claimitem`)
   return response.body
 }
 
