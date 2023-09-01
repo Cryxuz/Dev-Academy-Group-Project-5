@@ -26,7 +26,20 @@ export default function BasketItems() {
     <>
       <h2>This is your basket</h2>
       <p>Items in you basket</p>
-      {/* {basketItems.map(item)} */}
+      <ul>
+        {basketItems.map((claimed) => (
+          <li key={claimed.id}>
+            {claimed.name}
+            {/* <Link to={`${i.id}/claimitem`}>
+              <button onClick={() => handleClaim(i)} id="would-like">
+                Claim This
+              </button>
+            </Link> */}
+
+            {/* <button id="would-not-like">No Thank You</button> */}
+          </li>
+        ))}
+      </ul>
     </>
     //Array we need to iterate over an display each item
     // use a .map?
