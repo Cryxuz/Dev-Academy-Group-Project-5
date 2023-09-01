@@ -15,6 +15,18 @@ router.get('/', async (req, res) => {
 })
 
 export default router
+
+router.get('/:id/claimitem', (req, res) => {
+  console.log('server')
+  const id = Number(req.params.id)
+  getItemById(id)
+    .then((items) => {
+      res.json(items)
+    })
+    .catch((error) => {
+      res.status(500).send(error.message)
+    })
+})
 // call getItems from data base
 // return JSON array of all item objects
 

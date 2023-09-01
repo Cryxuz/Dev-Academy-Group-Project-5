@@ -8,7 +8,7 @@ import basketRoute from './routes/basket-routes.ts'
 const server = express()
 server.use(express.json())
 server.use('/api/v1/items', itemsRoute)
-server.use('api/v1/basket', basketRoute)
+server.use('/api/v1/basket', basketRoute)
 
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))

@@ -6,6 +6,8 @@ import { Outlet } from 'react-router-dom'
 // import ItemList from './ItemList.tsx'
 
 import ItemList from './ItemList.tsx'
+import BasketItems from './BasketItems.tsx'
+// import { Link } from 'react-router-dom'
 
 export default function App() {
   return (

@@ -1,4 +1,3 @@
-
 import { Route, createRoutesFromElements } from 'react-router-dom'
 import App from './App'
 // import APP
@@ -9,4 +8,3 @@ export const routes = createRoutesFromElements(
     <Route path="/claimitem" element={<insert element />} />
   </Route>
 )
-

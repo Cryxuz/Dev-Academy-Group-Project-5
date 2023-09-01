@@ -18,7 +18,7 @@ export async function getItemById(id: number) {
 }
 
 export async function getBasketItems() {
-  console.log()
   const response = await request.get('/api/v1/basket')
-  return response.body //?
+  console.log(response.body)
+  return response.body
 }
