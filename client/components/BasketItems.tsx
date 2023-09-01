@@ -29,6 +29,7 @@ export default function BasketItems() {
       <ul>
         {basketItems.map((claimed) => (
           <li key={claimed.id}>
+            <img className="item-img" src={String(claimed.image)} alt="items" />
             {claimed.name}
             {/* <Link to={`${i.id}/claimitem`}>
               <button onClick={() => handleClaim(i)} id="would-like">

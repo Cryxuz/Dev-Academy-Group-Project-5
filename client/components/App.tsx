@@ -15,10 +15,10 @@ export default function App() {
       <header className="header">
         <h1>One Mans Trash</h1>
         <Link to="/basket">
-          <button>Basket</button>
+          <button id="basket-btn">Basket</button>
         </Link>
         <Link to="/">
-          <button>Home</button>
+          <button id="home-btn">Home</button>
         </Link>
       </header>
       <section className="main">
