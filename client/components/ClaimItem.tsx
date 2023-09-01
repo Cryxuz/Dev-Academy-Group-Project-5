@@ -36,6 +36,7 @@ export default function ClaimItem() {
       <h3>Claimed Item: {itemClaimed.name}</h3>
       <h3>Please get in contact with {user.name}</h3>
       <p>email address: {user.email}</p>
+      <img className="item-img" src={String(itemClaimed.image)} alt="items" />
     </>
   )
 }

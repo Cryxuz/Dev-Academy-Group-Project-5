@@ -34,6 +34,22 @@ p {
   font-family: 'Josefin Slab', serif;
 }
 
+#basket-btn {
+  border-radius: 37px;
+  background: #c2a98e;
+  color: #fff;
+}
+
+#home-btn {
+  border-radius: 37px;
+  background: #c2a98e;
+  color: #fff;
+}
+
+/* image {
+  border-radius: 50%;
+} */
+
 button {
   border-radius: 25px;
   background: #b7d7a8;
@@ -51,4 +67,11 @@ li {
   background: rgba(208, 223, 227, 0.18);
   padding: 5px;
   margin: 5px;
+  justify-content: space-around;
+}
+
+.item-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
