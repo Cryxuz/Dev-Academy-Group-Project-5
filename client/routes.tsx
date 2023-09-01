@@ -19,7 +19,7 @@ import BasketItems from './components/BasketItems'
 
 export const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
-    <Route path="/" element={<App />} />
+    {/* <Route path="/" element={<App />} /> */}
     <Route index element={<ItemList />} />
     <Route path="/:id/claimitem" element={<ClaimItem />} />
     <Route path="/basket" element={<BasketItems />} />

@@ -1,3 +1,4 @@
 export async function seed(knex) {
-  return await knex('items').del()
+  await knex('items').del()
+  await knex('basket').del()
 }
