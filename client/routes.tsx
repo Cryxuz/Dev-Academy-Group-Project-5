@@ -19,7 +19,7 @@ import ItemList from './components/ItemList'
 export const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
     <Route index element={<ItemList />} />
-    <Route path="/claimitem" element={<ClaimItem />} />
+    <Route path="/:id/claimitem" element={<ClaimItem />} />
   </Route>
 )
 

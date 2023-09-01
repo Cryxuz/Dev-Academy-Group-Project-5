@@ -21,7 +21,7 @@ export default function ItemList() {
         {items.map((i: Item) => (
           <li key={i.id}>
             {i.name}
-            <Link to="/claimitem">
+            <Link to={`${i.id}/claimitem`}>
               <button id="would-like">Claim This</button>
             </Link>
 

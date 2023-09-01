@@ -10,3 +10,15 @@ export async function fetchAllItems() {
   const response = await request.get('/api/v1/items')
   return response.body
 }
+
+//Get /api/v1/:id/claimitem
+export async function getItemById(id: number) {
+  const response = await request.get(`/api/v1/${id}/claimitem`)
+  return response.body
+}
+
+export async function getBasketItems() {
+  console.log()
+  const response = await request.get('/api/v1/basket')
+  return response.body //?
+}
