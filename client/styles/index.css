@@ -1,8 +1,54 @@
 body {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   margin: 0;
   padding: 20px;
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  align-content: center;
+  /* background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 212, 255, 1) 44%,
+    rgba(73, 73, 196, 1) 82%
+  ); */
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  background-color: #d0dfe3;
+  text-align: left;
+  padding-left: 10px;
+}
+
+h2 {
+  font-family: 'Josefin Slab', serif;
+}
+
+h3 {
+  font-family: 'Pacifico', cursive;
+}
+
+p {
+  font-family: 'Josefin Slab', serif;
+}
+
+button {
+  border-radius: 25px;
+  background: #b7d7a8;
+  font-family: 'Josefin Slab', serif;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  margin: 5px;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Pacifico', cursive;
+  background: rgba(208, 223, 227, 0.18);
+  padding: 5px;
+  margin: 5px;
 }
